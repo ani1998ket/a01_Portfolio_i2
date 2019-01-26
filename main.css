@@ -3,6 +3,7 @@
     margin : 0;
     padding : 0;
     color : black;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Shadows Into Light', cursive;
