@@ -5,6 +5,13 @@
     color : black;
     scroll-behavior: smooth;
 }
+#canvas{
+    position : absolute;
+    z-index: -1;
+    width : 100%;
+    height : 100%;
+    background : #fffdd0;
+}
 body{
     font-family: 'Shadows Into Light', cursive;
     background-color: #fffdd0;
