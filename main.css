@@ -5,16 +5,17 @@
     color : black;
     scroll-behavior: smooth;
 }
-#canvas{
-    position : absolute;
-    z-index: -1;
-    width : 100%;
-    height : 100%;
-    background : #fffdd0;
-}
+
 body{
     font-family: 'Shadows Into Light', cursive;
     background-color: #fffdd0;
+}
+#canvas{
+    position : fixed;
+    z-index: -1;
+    /* width : 100%;
+    height : 100%; */
+    background : #fffdd0;
 }
 .main_container, .content{
     display: flex;
@@ -116,5 +117,6 @@ a:hover{
         border : none;
         height: 100%;
         margin-left : 2em;
+        background-color: none;
     }
 }
