@@ -28,7 +28,7 @@ class Particle{
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height - canvas.height;
         this.radius = Math.random() * 3 + 1;
-        this.color = "orange";
+        this.color = "pink";
         this.vy = 1;
         this.vx = Math.random() * 2 - 1 || 1;
         this.lifespan = Math.random() * 200 + 100 ;
@@ -51,7 +51,8 @@ console.log(randomColor());
 console.log(particles);
 
 function draw(){
-    ctx.fillStyle = "rgba(255, 253, 208 ,0.7)";
+     ctx.fillStyle = "rgba(255, 253, 208 ,0.7)";
+    //ctx.fillStyle = 'white';
     ctx.fillRect(0,0, canvas.width, canvas.height);
     particles.forEach(element => {
         element.draw(ctx);
@@ -78,3 +79,16 @@ window.onresize = function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
+
+
+function loadDoc(filename) {
+    //();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("home").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET","pages/" + filename , true);
+    xhttp.send();
+  }
