@@ -28,7 +28,7 @@ class Particle{
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height - canvas.height;
         this.radius = Math.random() * 3 + 1;
-        this.color = "pink";
+        this.color = "orange";
         this.vy = 1;
         this.vx = Math.random() * 2 - 1 || 1;
         this.lifespan = Math.random() * 200 + 100 ;
@@ -82,13 +82,12 @@ window.onresize = function(){
 
 
 function loadDoc(filename) {
-    alert();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
        document.getElementById("home").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET","/pages/" + filename , true);
+    xhttp.open("GET",window.location.pathname + "pages/" + filename , true);
     xhttp.send();
   }
