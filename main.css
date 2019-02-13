@@ -55,6 +55,9 @@ nav{
     border-bottom: dashed black 2px;
     background-color: #fffdd0;
 }
+nav > a{
+    font-size: 2rem;
+}
 .home{
     display: flex;
     flex-direction: column;
